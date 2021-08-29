@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace PrimeiroApp
+namespace Api
 {
     public class Startup
     {
@@ -30,7 +30,7 @@ namespace PrimeiroApp
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PrimeiroApp", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });
             });
         }
 
@@ -41,7 +41,7 @@ namespace PrimeiroApp
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PrimeiroApp v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1"));
             }
 
             app.UseHttpsRedirection();

@@ -1,6 +1,6 @@
 using System;
 
-namespace PrimeiroApp
+namespace Api
 {
     public class WeatherForecast
     {
